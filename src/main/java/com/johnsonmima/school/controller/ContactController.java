@@ -38,14 +38,16 @@ public class ContactController {
 
     @PostMapping(value = "/sendMessage")
     public String saveMessage(@Valid @ModelAttribute(name = "contact") Contact contact, Errors errors){
-        // save to db
-        boolean saved = contactService.isSaved(contact);
+        
 
         if(errors.hasErrors()){
             log.error("Form errors" + errors.toString());
             return "contact.html";
 
         }
+
+        // save to db
+        boolean saved = contactService.isSaved(contact);
         
         return "redirect:/contact";
     }
