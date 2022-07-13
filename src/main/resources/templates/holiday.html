@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+   
+    <div th:replace="fragment/common :: appHeader"></div>
+    <title th:text="${title}">Holidays</title>
+  </head>
+  <body>
+   
+    <div class="cover-content">   
+   <div th:insert="fragment/main_nav :: mainNav"></div>
+   <div class="holiday">
+    <p class="holiday-heading">Festival Holidays</p>
+
+    <table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Day</th>
+      <th scope="col">Reason</th>
+      <th scope="col">Type</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:if="${festival} == true" th:each="holiday: ${FESTIVAL}">
+      <td th:text="${holiday.day}"></td>
+      <td th:text="${holiday.reason}"></td>
+      <td th:text="Festival"></td>
+      
+    </tr>
+
+    <tr th:if="${federal} == true" th:each="holiday: ${FEDERAL}">
+      <td th:text="${holiday.day}"></td>
+      <td th:text="${holiday.reason}"></td>
+       <td th:text="Federal"></td>
+    
+    </tr>
+  </tbody>
+</table>
+
+   </div>
+
+   </div>
+  
+   
+
+  
+   <div th:insert="fragment/common :: appFooterScripts">
+  </div>
+  </body>
+  
+</html>
