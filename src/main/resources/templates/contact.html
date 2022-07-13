@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+   
+    <div th:replace="fragment/common :: appHeader"></div>
+    <title th:text="${title}">Contact Us</title>
+  </head>
+  <body>
+   
+    <div class="cover-content">   
+   <div th:insert="fragment/main_nav :: mainNav"></div>
+
+
+   <div class="contact">
+
+    <p class="contact-heading">Contact US</p>
+
+<form method="post" th:action="@{\sendMessage}" >
+  <div class="container-fluid">
+
+    <div class="row">
+    <div class="col-6 contact-frm-spacing">
+    <label for="validationCustom01" class="contact-label">First name</label>
+    <input type="text" class="form-control" name="firstName" id="firstName" value="" placeholder="First Name" >
+  </div>
+  <div class="col-6 contact-frm-spacing">
+    <label for="validationCustom01" class="contact-label">Last name</label>
+    <input type="text" class="form-control" name="lastName" id="lastName" value="" placeholder="Last Name" >
+  </div>
+    </div>
+
+     <div class="row">
+    <div class="col-6 contact-frm-spacing">
+    <label for="validationCustom01" class="contact-label">Subject</label>
+    <input type="text" class="form-control" name="subject" id="subject" value="" placeholder="Subject" >
+  </div>
+  <div class="col-6 contact-frm-spacing">
+    <label for="validationCustom01" class="contact-label">Email Address</label>
+    <input type="email" class="form-control" name="email" id="email"  value="" placeholder="Email" >
+  </div>
+    </div>
+
+    <div class="row">
+  <div class="col-12 contact-frm-spacing">
+    <label for="validationCustom01" class="contact-label">Message</label>
+    <textarea class="form-control" name="message"  id="message" placeholder="Enter message" required></textarea>
+  </div>
+    </div>
+
+        <div class="row">
+ <div class="col-12 contact-frm-spacing">
+    <button class="btn btn-light" type="submit">Submit form</button>
+  </div>
+        </div>
+
+  </div>
+ 
+
+
+
+
+
+
+
+
+  
+
+
+ 
+</form>
+
+   </div>
+
+   </div>
+   
+  
+   
+
+  
+   <div th:insert="fragment/common :: appFooterScripts">
+  </div>
+  </body>
+  
+</html>

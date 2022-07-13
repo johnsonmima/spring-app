@@ -1,0 +1,77 @@
+// variables
+$primary-color: #f5f5f5;
+$link-primary-color: #ffffff;
+
+
+
+// navbar
+.cover-content {
+  background-color: $primary-color;
+  height: 100vh;
+  background-image: url("../images/header-bg.jpg");
+  background-size: cover;
+
+  a{
+    color: $link-primary-color;
+  }
+  .active-page {
+    color: darken($color: $link-primary-color, $amount: 50%);
+  }
+
+  a:hover {
+    color: darken($color: $link-primary-color, $amount: 50%);
+  }
+  &_h1{
+    color:$primary-color;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5rem;
+    
+  }
+}
+
+// contact
+.contact{
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  translate: -30% -10%;
+  width: 40rem;
+  background-color: transparent;
+  padding: 1rem;
+
+  &-heading{
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color: $primary-color;
+  }
+  &-label{
+    color: $primary-color;
+    padding-top: 0.5rem;
+  }
+
+  &-frm-spacing{
+    padding-top: 0.5rem;
+  }
+ 
+}
+
+
+.holiday{
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  translate: -30% -5%;
+  width: 30rem;
+  background-color: transparent;
+  padding: 1rem;
+
+   &-heading{
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color: $primary-color;
+  }
+
+}
