@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+   
+    <div th:replace="fragment/common :: appHeader"></div>
+    <title th:text="${title}">Log In</title>
+  </head>
+  <body>
+   
+    <div class="cover-content">   
+   <div th:insert="fragment/main_nav :: mainNav"></div>
+
+
+   <div class="contact">
+
+    <p class="contact-heading">Log In</p>
+
+<form method="post"  th:action="@{\login}">
+  <div class="container-fluid">
+
+    <div class="row">
+        <div class="col-12 contact-frm-spacing">
+            
+             <div class="alert alert-danger" role="alert" th:if="${!#strings.isEmpty('response')}" th:text="${response}">Error</div>
+        </div>
+    <div class="col-12 contact-frm-spacing">
+    <label for="validationCustom01" class="contact-label">Username</label>
+    <input type="text" class="form-control" name="username"  value="" placeholder="Username" >
+   
+  </div>
+  <div class="col-12 contact-frm-spacing">
+    <label for="validationCustom01" class="contact-label">Password</label>
+    <input type="password" class="form-control" name="password"  value="" placeholder="Password" >
+    
+  </div>
+    </div>
+
+
+        <div class="row">
+ <div class="col-12 contact-frm-spacing">
+    <button class="btn btn-light" type="submit">Log In</button>
+  </div>
+        </div>
+
+  </div>
+ 
+</form>
+
+   </div>
+
+   </div>
+   
+  
+   <div th:insert="fragment/common :: appFooterScripts">
+  </div>
+  </body>
+  
+</html>
