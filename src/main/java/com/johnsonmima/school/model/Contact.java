@@ -15,7 +15,7 @@ public class Contact{
     @Size(min = 3, message = "Must be greater than 3 characters")
     private String lastName;
     @NotBlank(message = "Required")
-    @Pattern(regexp = "^$|[0-9]{10}", message = "Enter Valid Email")
+    //@Pattern(regexp = "^$|[0-9]{10}", message = "Enter Valid Email")
     private String email;
     @NotBlank(message = "Required")
     @Size(min = 3, message = "Must be greater than 3 characters")
