@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+>
+  <head>
+   
+    <div th:replace="fragment/common :: appHeader"></div>
+    <title th:text="${title}">Welcome!</title>
+  </head>
+  <body>
+   
+    <div class="cover-content">   
+   <div th:insert="fragment/main_nav :: mainNav"></div>
+
+   
+   <div class="position-absolute top-50 start-50">
+<p class="cover-content_h1" style="color:#f5f5f5 ;" th:text="${'Error - ' + errormsg}">Error</p>
+
+
+   </div>
+   </div>
+  
+   
+
+  
+   <div th:insert="fragment/common :: appFooterScripts">
+  </div>
+  </body>
+  
+</html>
