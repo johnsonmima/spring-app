@@ -15,7 +15,7 @@
 
     <p class="contact-heading">Log In</p>
 
-<form method="post"  th:action="@{\login}">
+<form method="post"  th:action="@{/login}">
   <div class="container-fluid">
 
     <div class="row">
@@ -31,10 +31,11 @@
   <div class="col-12 contact-frm-spacing">
     <label for="validationCustom01" class="contact-label">Password</label>
     <input type="password" class="form-control" name="password"  value="" placeholder="Password" >
+     
     
   </div>
     </div>
-
+<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" >
 
         <div class="row">
  <div class="col-12 contact-frm-spacing">

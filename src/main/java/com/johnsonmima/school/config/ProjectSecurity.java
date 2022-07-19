@@ -35,6 +35,8 @@ public class ProjectSecurity {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
        // calling http.csrf().disable() will disable CSRF
         http 
+        .csrf().ignoringAntMatchers("/saveMsg")
+        .and()
         .authorizeRequests()
         .mvcMatchers("/dashboard").authenticated()
         .mvcMatchers("/home").permitAll()
